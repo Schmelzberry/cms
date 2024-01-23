@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <h5>React CRUD Operation using PHP API and MySQL</h5>
+     <h3>React CRUD Operation using PHP API and MySQL</h3>
 
      <BrowserRouter>
       <nav>

@@ -15,9 +15,15 @@ export default function ListUser() {
       setUsers(response.data);
     });
   }
+  const deleteUser = (id) => {
+    axios.delete(`http://localhost:80/api/user/${id}/edit`).then(function(response){
+      console.log(response.data);
+      getUsers();
+    });
+  }
 
   return (
-    <div>
+    <div className="form-container">
       <h1>List Users</h1>
       <table>
         <thead>
@@ -40,7 +46,7 @@ export default function ListUser() {
                 <Link to={`user/${user.id}/edit`} style={{ marginRight: "10px" }}>
                   Edit
                 </Link>
-                <button>Delete</button>
+                <button onClick={() => deleteUser(user.id)}>Delete</button>
               </td>
             </tr>
           ))}

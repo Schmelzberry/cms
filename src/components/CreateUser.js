@@ -27,7 +27,7 @@ export default function CreateUser() {
     
   }
   return (
-    <div>
+    <div className="form-container">
       <h1>Create User</h1>
         <form onSubmit={handleSubmit}>
           <table cellSpacing="10">
